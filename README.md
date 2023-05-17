@@ -1,13 +1,15 @@
 # MY QUICKSTART EXPRESS BOILERPLATE
 
-## STEP 1. Creating a project directory
+## How to use this?
+
+### STEP 1. Creating a project directory
 
 Create your own project directory && go to that directory 
 ```
 mkdir <your-project-directory> && cd <your-project-directory>
 ```
 
-## STEP 2. Installation & Setup
+### STEP 2. Installation & Setup
 
 Run this command inside your project directory
 ```
