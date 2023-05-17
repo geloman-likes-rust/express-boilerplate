@@ -17,6 +17,8 @@ git clone https://github.com/geloman-likes-rust/express-boilerplate . && ./setup
 ```
 
 ### STEP 3. Run the App
+
+Inside your project directory, type **npm run dev** and press/hit enter
 ```
 npm run dev
 ```
