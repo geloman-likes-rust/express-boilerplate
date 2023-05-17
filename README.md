@@ -15,3 +15,8 @@ Run this command inside your project directory
 ```
 git clone https://github.com/geloman-likes-rust/express-boilerplate . && ./setup.sh
 ```
+
+### STEP 3. Run the App
+```
+npm run dev
+```
