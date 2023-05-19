@@ -1,6 +1,8 @@
+import dotenv from "dotenv"
 import express from "express"
 import rootRoute from "./routes/index.js"
 import corsValidationMiddleware from "./middlewares/corsValidation.js"
+dotenv.config()
 
 let app = express()
 let PORT = process.env.SERVER_PORT || 6969
