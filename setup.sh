@@ -5,3 +5,4 @@ npm i express dotenv cors
 npm i nodemon --save-dev
 rm -rdf .git
 git init
+rm -rdf setup.sh
