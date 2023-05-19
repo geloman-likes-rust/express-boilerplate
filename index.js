@@ -7,6 +7,7 @@ dotenv.config()
 let app = express()
 let PORT = process.env.SERVER_PORT || 6969
 
+app.use(express.json())
 app.use(corsValidationMiddleware)
 app.use(rootRoute)
 
