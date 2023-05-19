@@ -1,3 +1,3 @@
-import corsValidation from "./corsValidation.js"
+import corsValidationMiddleware from "./corsValidation.js"
 
-export { corsValidation }
+export { corsValidationMiddleware }

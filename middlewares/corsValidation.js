@@ -10,6 +10,6 @@ const OPTIONS = {
   allowedHeaders: ["Content-Type", "Authorization"]
 }
 
-let corsValidation = cors(OPTIONS)
+let corsValidationMiddleware = cors(OPTIONS)
 
-export default corsValidation
+export default corsValidationMiddleware
