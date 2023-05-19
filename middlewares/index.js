@@ -1,1 +1,3 @@
-// middleware entry point
+import corsValidation from "./corsValidation.js"
+
+export { corsValidation }
