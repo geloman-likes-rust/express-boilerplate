@@ -5,7 +5,7 @@ import corsValidation from "./middlewares/corsValidation.js"
 let app = express()
 let PORT = process.env.SERVER_PORT || 6969
 
-app.options(corsValidation)
+app.use(corsValidation)
 app.use("/", rootRoute)
 
 let handleServerConnection = (error) => console.log(error ? `Error message: ${error.message}` : `Server is Listening on Port ${PORT}`)
