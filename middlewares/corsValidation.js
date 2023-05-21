@@ -1,15 +1,16 @@
 import dotenv from "dotenv"
-import cors from "cors"
+import Cors from "../utils/cors.js"
 dotenv.config()
 
-const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS?.replace(" ", "").split(",")
+const ORIGINS = process.env.ALLOWED_ORIGINS?.replace(" ", "").split(",")
+const METHODS = process.env.ALLOWED_METHODS?.replace(" ", "").split(",")
+const HEADERS = process.env.ALLOWED_HEADERS?.replace(" ", "").split(",")
 
-const OPTIONS = {
-  origin: ALLOWED_ORIGINS,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+export default function corsValidationMiddleware(request, response, next) {
+  let cors = new Cors(request, response, next)
+  cors
+    .allowOrigins(ORIGINS)
+    .allowMethods(METHODS)
+    .allowHeaders(HEADERS)
+    .next()
 }
-
-let corsValidationMiddleware = cors(OPTIONS)
-
-export default corsValidationMiddleware
