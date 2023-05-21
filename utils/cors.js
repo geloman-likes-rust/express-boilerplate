@@ -10,32 +10,27 @@ export default class Cors {
     this.next()
   }
 
-  allowOrigins(origins = []) {
-    this.#accessControlAllow("Origin", origins)
+  allowOrigin(origin = "*") {
+    this.#accessControlAllow("Origin", origin)
     return this
   }
 
-  allowHeaders(headers = []) {
+  allowHeaders(headers = "*") {
     this.#accessControlAllow("Headers", headers)
     return this
   }
 
-  allowMethods(methods = []) {
+  allowMethods(methods = "*") {
     this.#accessControlAllow("Methods", methods)
     return this
   }
 
-  allowCredentials(credentials = []) {
+  allowCredentials(credentials = "*") {
     this.#accessControlAllow("Credentials", credentials)
     return this
   }
 
-  #accessControlAllow(field, values) {
-    if (values.length === 0) {
-      this.response.setHeader(`Access-Control-Allow-${field}`, "*")
-    }
-    else {
-      values.forEach(value => this.response.setHeader(`Access-Control-Allow-${field}`, value))
-    }
+  #accessControlAllow(field, value) {
+    this.response.setHeader(`Access-Control-Allow-${field}`, value)
   }
 }
