@@ -7,8 +7,11 @@ dotenv.config()
 let app = express()
 let PORT = process.env.SERVER_PORT || 6969
 
+// GLOBAL MIDDLEWARES
 app.use(express.json())
 app.use(corsValidationMiddleware)
+
+// ROUTES/ENDPOINTS
 app.use(rootRoute)
 
 let handleServerConnection = (error) => console.log(error ? `Error message: ${error.message}` : `Server is Listening on Port ${PORT}`)
