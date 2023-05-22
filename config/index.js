@@ -1,3 +1,3 @@
-import mysqlConfig from "./mysql"
+import mysqlConfig from "./mysql.js"
 
 export { mysqlConfig }
