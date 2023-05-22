@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Update the "name" field in package.json based on your project directory name
+# UPDATE the "name" field in package.json based on the name of your project directory
 current_directory_name=$(basename "$PWD")
 sed -i "s/\"name\": \".*\"/\"name\": \"$current_directory_name\"/" package.json
 
