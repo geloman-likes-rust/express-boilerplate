@@ -25,8 +25,8 @@ export default class Cors {
     return this
   }
 
-  allowCredentials(credentials = "*") {
-    this.#accessControlAllow("Credentials", credentials)
+  allowCredentials() {
+    this.#accessControlAllow("Credentials", true)
     return this
   }
 
