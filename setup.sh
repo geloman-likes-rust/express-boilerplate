@@ -5,7 +5,7 @@ current_directory_name=$(basename "$PWD")
 sed -i "s/\"name\": \".*\"/\"name\": \"$current_directory_name\"/" package.json
 
 # INSTALLATION & SETUP
-npm i express dotenv jsonwebtoken cookie-parser
+npm i express dotenv jsonwebtoken cookie-parser bcrypt
 npm i nodemon --save-dev
 rm -rdf .git
 git init
